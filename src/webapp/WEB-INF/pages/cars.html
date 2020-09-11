@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
-      xmlns:spring="http://www.springframework.org/tags">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
@@ -40,16 +39,16 @@
 <body>
 <table border="2" style="width:600px" class="table_dark">
         <thead>
-        <tr th:text="#{model}"></tr>
+        <tr th:text="#{message}"></tr>
         </thead>
     <tbody>
     <tr>
-        <td th:text="message"></td>
+        <td th:text="#{message}"></td>
     </tr>
     <tr>
-        <td align = "center">Id</td>
-        <td align = "center">Model</td>
-        <td align = "center">Color</td>
+        <td align = "center" th:text="#{id}"> </td>
+        <td align = "center" th:text="#{model}"></td>
+        <td align = "center" th:text="#{color}"></td>
     </tr>
     <tr th:each="carname : ${carslist}">
         <td th:text="${carname.getId()}" align="center"></td>
