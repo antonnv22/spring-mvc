@@ -17,12 +17,7 @@ public class CarController {
 
     @GetMapping(value = "/cars")
     public String printCar(@RequestParam(defaultValue = "test") String locale, ModelMap model) {
-        model.addAttribute("tablename","CARS");
-        if (locale.equals("ru")) {
-            model.addAttribute("tablename","МАШИНЫ");
-        }
         model.addAttribute("carslist", CarList);
-
         return "cars";
     }
 
